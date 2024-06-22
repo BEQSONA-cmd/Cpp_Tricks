@@ -1,5 +1,7 @@
 #include <iostream>
 
+// Static Casting
+
 // numeric casting
 
 float cast(void)

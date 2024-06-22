@@ -1,6 +1,6 @@
 #include <iostream>
 
-// pointer aliasing
+// Pointer Aliasing
 
 int foo(int *a, int *b) 
 {

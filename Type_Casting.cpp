@@ -1,12 +1,12 @@
 #include <iostream>
 
+// Type Casting
+
 struct t_data
 {
     int x;
     float y;
 };
-
-// type casting
 
 int main(void) 
 {

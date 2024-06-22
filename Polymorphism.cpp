@@ -1,6 +1,6 @@
 #include <iostream>
 
-// dynamic casting
+// Polymorphism
 
 class A
 {
