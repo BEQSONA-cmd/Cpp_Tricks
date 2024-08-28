@@ -76,7 +76,8 @@ void HashMap::printHashMap()
 
 void HashMap::deleteHashMap()
 {
-    for (int i = 0; i < hash_map->size; i++)
+    int i = 0;
+    while (i < hash_map->size)
     {
         Hash_Map_Enter *current = hash_map->array[i];
         Hash_Map_Enter *next;
@@ -86,6 +87,7 @@ void HashMap::deleteHashMap()
             delete current;
             current = next;
         }
+        i++;
     }
     delete[] hash_map->array;
     delete hash_map;
