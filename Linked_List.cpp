@@ -15,6 +15,7 @@ class LinkedList
     public:
         void addNode(int data);
         void printList();
+        void deleteList();
 };
 
 void LinkedList::addNode(int data)
@@ -35,6 +36,19 @@ void LinkedList::printList()
     }
 }
 
+void LinkedList::deleteList()
+{
+    Node *current = head;
+    Node *next;
+    while (current != NULL)
+    {
+        next = current->next;
+        delete current;
+        current = next;
+    }
+    head = NULL;
+}
+
 // Doubly Linked List
 
 struct DNode
@@ -51,6 +65,7 @@ class DoublyLinkedList
     public:
         void addNode(int data);
         void printList();
+        void deleteList();
 };
 
 void DoublyLinkedList::addNode(int data)
@@ -74,19 +89,42 @@ void DoublyLinkedList::printList()
     }
 }
 
+void DoublyLinkedList::deleteList()
+{
+    DNode *current = head;
+    DNode *next;
+    while (current != NULL)
+    {
+        next = current->next;
+        delete current;
+        current = next;
+    }
+    head = NULL;
+}
+
 int main(void)
 {
+    // LinkedList list
     LinkedList list;
+    
     list.addNode(1);
     list.addNode(2);
     list.addNode(3);
+
     list.printList();
 
+    list.deleteList();
+
+    // Doubly Linked List
     DoublyLinkedList dlist;
+
     dlist.addNode(1);
     dlist.addNode(2);
     dlist.addNode(3);
+    
     dlist.printList();
+
+    dlist.deleteList();
 
     return 0;
 }
