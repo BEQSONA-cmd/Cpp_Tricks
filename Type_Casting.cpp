@@ -11,6 +11,7 @@ struct t_data
 int main(void) 
 {
     // casting int to char
+    int i = 0;
     int a = 49;
 
     char *b = (char *)(&a);
@@ -24,8 +25,11 @@ int main(void)
 
     char *raw = (char *)(&data);
 
-    for (int i = 0; i < sizeof(data); i++)
+    while (i < sizeof(data))
+    {
         std::cout << raw[i] << " ";
+        i++;
+    }
     std::cout << std::endl;
 
     return 0;
