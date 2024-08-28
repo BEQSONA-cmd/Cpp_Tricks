@@ -2,8 +2,6 @@
 
 // Linked List
 
-// Node struct
-
 struct Node
 {
     int data;
